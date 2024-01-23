@@ -57,7 +57,7 @@ class CustomSimpleScanViewController: SimpleScanViewController {
     // MARK: -- Close UI --
     override public func setupCloseButtonUi() {
         super.setupCloseButtonUi()
-        closeButton.setTitle("", for: .normal)
+        closeButton.setTitle("Atrás", for: .normal)
         closeButton.setImage(UIImage(named: "arrow_back_close"), for: .normal)
 //        closeButton.setImage(UIImage(named: "back_arrow"), for: .normal)
     }
@@ -65,7 +65,7 @@ class CustomSimpleScanViewController: SimpleScanViewController {
     // MARK: -- Torch UI --
     override public func setupTorchButtonUi() {
         super.setupTorchButtonUi()
-        torchButton.setTitle("", for: .normal)
+        torchButton.setTitle("Flash on", for: .normal)
         torchButton.setImage(UIImage(named: "flash_on"), for: .normal)
     }
     
@@ -73,10 +73,10 @@ class CustomSimpleScanViewController: SimpleScanViewController {
         super.torchButtonPress()
         
         if isTorchOn() {
-             torchButton.setTitle("", for: .normal)
+             torchButton.setTitle("Flash off", for: .normal)
             torchButton.setImage(UIImage(named: "flash_off"), for: .normal)
         } else {
-            torchButton.setTitle("", for: .normal)
+            torchButton.setTitle("Flash on", for: .normal)
             torchButton.setImage(UIImage(named: "flash_on"), for: .normal)
         }
     }
